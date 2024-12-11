@@ -1,1 +1,1 @@
-first commit
+# Repositório exclusivo para armazenar códigos de estudos
