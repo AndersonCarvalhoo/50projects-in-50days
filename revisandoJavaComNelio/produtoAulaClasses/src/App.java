@@ -6,18 +6,18 @@ import entities.Produto;
 public class App {
     public static void main(String[] args) throws Exception {
         Locale.setDefault(Locale.US);
-        Produto product = new Produto();
 
         Scanner scan = new Scanner(System.in);
 
         System.out.println("Enter product data");
 
         System.out.print("Name: ");
-        product.name = scan.next();
+        String name = scan.next();
         System.out.print("Price: ");
-        product.price = scan.nextDouble();
+        Double price = scan.nextDouble();
         System.out.print("Quantity in stock: ");
-        product.quantity = scan.nextInt();
+        int quantity = scan.nextInt();
+        Produto product = new Produto(name, price, quantity);
 
         System.out.println("\nProduct data: " + product);
 
