@@ -16,7 +16,6 @@ public class ProgramWorker {
     System.out.print("Enter Departament's Name: ");
     String departamentName = scan.nextLine();
     Departament departament = new Departament(departamentName);
-
     System.out.println("Enter Worker Data: ");
     System.out.print("Name: ");
     String workerName = scan.nextLine();
@@ -27,9 +26,9 @@ public class ProgramWorker {
     System.out.print("How many contracts to this worker? ");
     int contractIterator = scan.nextInt();
 
-    scan.nextLine();
-
     Worker worker = new Worker(workerName, WorkerLevel.valueOf(level.toUpperCase()), baseSalary, departament);
+
+    scan.nextLine();
     for (int i = 0; i < contractIterator; i++) {
       System.out.println("Enter contract #" + (i + 1) + " data: ");
       System.out.print("Date (DD/MM/YYYY): ");
