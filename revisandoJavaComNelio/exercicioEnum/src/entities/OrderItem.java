@@ -2,13 +2,12 @@ package entities;
 
 public class OrderItem {
   private Integer quantity;
-  private Double price;
+  private Double price = 0.0;
 
   Product product;
 
-  public OrderItem(Integer quantity, Double price, Product product) {
+  public OrderItem(Integer quantity, Product product) {
     this.quantity = quantity;
-    this.price = price;
     this.product = product;
   }
 
@@ -37,7 +36,7 @@ public class OrderItem {
   }
 
   public Double subTotal() {
-    Double subTotal = product.getPrice() * quantity;
+    Double subTotal = this.product.getPrice() * this.quantity;
     this.price = subTotal;
     return subTotal;
   }

@@ -2,7 +2,7 @@ package entities;
 
 public class Product {
   private String name;
-  private Double price;
+  private Double price = 0.0;
 
   public Product() {
 

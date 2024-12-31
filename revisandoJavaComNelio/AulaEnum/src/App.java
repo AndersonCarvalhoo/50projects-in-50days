@@ -1,7 +1,7 @@
 import java.util.Date;
 
 import entities.Order;
-import entities.enums.OrderStatus;
+import entities.OrderStatus;
 
 public class App {
     public static void main(String[] args) throws Exception {
