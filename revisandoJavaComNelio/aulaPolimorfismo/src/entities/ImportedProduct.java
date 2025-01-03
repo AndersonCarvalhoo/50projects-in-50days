@@ -24,4 +24,9 @@ public class ImportedProduct extends Product {
   public Double totalPrice() {
     return super.price + this.customsFee;
   }
+
+  @Override
+  public String toString() {
+    return "ImportedProduct [customsFee=" + customsFee + ", price=" + price + ", getName()=" + getName() + "]";
+  }
 }

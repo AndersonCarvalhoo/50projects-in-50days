@@ -28,4 +28,9 @@ public class Product {
   public String priceTag() {
     return this.name + " R$" + this.price;
   }
+
+  @Override
+  public String toString() {
+    return "Product [name=" + name + ", price=" + price + "]";
+  }
 }

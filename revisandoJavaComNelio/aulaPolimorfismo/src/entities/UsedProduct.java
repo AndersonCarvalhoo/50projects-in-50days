@@ -25,4 +25,9 @@ public class UsedProduct extends Product {
     return this.getName() + " (used) R$" + this.price + " (Manufacture Date: " + sdf.format(manufactureDate) + ")";
   }
 
+  @Override
+  public String toString() {
+    return "UsedProduct [price=" + price + ", manufactureDate=" + manufactureDate + ", getName()=" + getName() + "]";
+  }
+
 }
