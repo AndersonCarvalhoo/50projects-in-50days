@@ -4,7 +4,7 @@ import entities.SavingsAccount;
 
 public class AppHerança {
     public static void main(String[] args) throws Exception {
-        Account acc = new Account(1001, "Andeson", 0.0);
+
         BusinessAccount bAcc = new BusinessAccount(1002, "Kezia", 0.0, 500.0);
 
         // UPCASTING
