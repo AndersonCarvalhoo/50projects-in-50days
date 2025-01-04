@@ -38,6 +38,6 @@ public class App {
         for (Shape shape : shapes) {
             System.out.println(shape.area());
         }
-
+        scan.close();
     }
 }
