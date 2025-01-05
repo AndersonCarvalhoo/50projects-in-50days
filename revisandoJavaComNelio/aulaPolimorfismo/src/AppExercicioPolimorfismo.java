@@ -44,6 +44,6 @@ public class AppExercicioPolimorfismo {
     for (Product product : products) {
       System.out.println(product.priceTag());
     }
-
+    scan.close();
   }
 }

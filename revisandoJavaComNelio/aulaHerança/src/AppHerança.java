@@ -5,15 +5,15 @@ import entities.SavingsAccount;
 public class AppHerança {
     public static void main(String[] args) throws Exception {
 
-        BusinessAccount bAcc = new BusinessAccount(1002, "Kezia", 0.0, 500.0);
+        // BusinessAccount bAcc = new BusinessAccount(1002, "Kezia", 0.0, 500.0);
 
         // UPCASTING
-        Account acc1 = bAcc;
-        Account acc2 = new BusinessAccount(1003, "bob", 0.0, 200.0);
+        // Account acc1 = bAcc;
+        // Account acc2 = new BusinessAccount(1003, "bob", 0.0, 200.0);
         Account acc3 = new SavingsAccount(1004, "Ana", 0.0, 0.01);
 
         // DOWNCASTING
-        BusinessAccount acc4 = (BusinessAccount) acc2;
+        // BusinessAccount acc4 = (BusinessAccount) acc2;
 
         // BusinessAccount acc5 = (BusinessAccount) acc3;
         if (acc3 instanceof BusinessAccount) {
