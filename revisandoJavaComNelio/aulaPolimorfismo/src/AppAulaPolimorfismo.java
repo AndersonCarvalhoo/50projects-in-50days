@@ -39,7 +39,7 @@ public class AppAulaPolimorfismo {
 
         System.out.println("PAYMENTS: ");
         for (Employee employee : employees) {
-            System.out.println(employee.getName() + " - " + employee.payment());
+            System.out.println(employee.getName() + " - R$" + employee.payment());
         }
 
         scan.close();
