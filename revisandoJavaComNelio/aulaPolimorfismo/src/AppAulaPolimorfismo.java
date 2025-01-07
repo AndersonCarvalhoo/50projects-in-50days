@@ -26,15 +26,14 @@ public class AppAulaPolimorfismo {
             Integer hours = scan.nextInt();
             System.out.print("Value per hour: ");
             Double valuePerHour = scan.nextDouble();
-            Employee employee;
+
             if (outsourcedInput == 'y') {
                 System.out.print("Additional charge: ");
                 Double additionalCharge = scan.nextDouble();
-                employee = new OutsourcedEmployee(name, hours, valuePerHour, additionalCharge);
+                employees.add(new OutsourcedEmployee(name, hours, valuePerHour, additionalCharge));
                 continue;
             }
-            employee = new Employee(name, hours, valuePerHour);
-            employees.add(employee);
+            employees.add(new Employee(name, hours, valuePerHour));
         }
 
         System.out.println("PAYMENTS: ");
