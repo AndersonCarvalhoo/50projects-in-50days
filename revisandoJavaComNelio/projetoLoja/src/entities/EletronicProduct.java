@@ -20,10 +20,4 @@ public class EletronicProduct extends Product {
     this.guarantee = guarantee;
   }
 
-  @Override
-  public String toString() {
-    return "Product [name=" + super.getName() + ", price=" + super.getPrice() + ", stock=" + super.getStock()
-        + ", guarantee=" + this.getGuarantee() + "]";
-  }
-
 }

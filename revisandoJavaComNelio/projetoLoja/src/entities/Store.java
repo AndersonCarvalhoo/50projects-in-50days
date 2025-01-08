@@ -6,7 +6,7 @@ public class Store {
   private String name;
   private String phone;
 
-  ArrayList<Product> products = new ArrayList<>();
+  private ArrayList<Product> products = new ArrayList<>();
 
   public Store() {
     this.generateTestData();

@@ -26,10 +26,4 @@ public class ClothingProduct extends Product {
     this.material = material;
   }
 
-  @Override
-  public String toString() {
-    return "Product [name=" + super.getName() + ", price=" + super.getPrice() + ", stock=" + super.getStock()
-        + ", size=" + this.getSize() + ", material=" + this.getMaterial() + "]";
-  }
-
 }

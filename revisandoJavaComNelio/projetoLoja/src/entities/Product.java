@@ -2,7 +2,7 @@ package entities;
 
 public class Product {
   private String name;
-  private Double price;
+  private Double price = 0.0;
   private int stock;
 
   public String getName() {
@@ -53,7 +53,7 @@ public class Product {
 
   @Override
   public String toString() {
-    return "Product [name=" + name + ", price=" + price + ", stock=" + stock + "]";
+    return "Product [name=" + name + ", price=" + price + "]";
   }
 
 }
