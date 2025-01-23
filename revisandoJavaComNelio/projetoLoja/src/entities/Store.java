@@ -44,6 +44,10 @@ public class Store {
     return products;
   }
 
+  public Product getProduct(int index) {
+    return products.get(index);
+  }
+
   public void addProduct(Product product) {
     this.products.add(product);
   }
