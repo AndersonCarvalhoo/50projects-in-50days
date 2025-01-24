@@ -1,8 +1,8 @@
 public class AppAlgoritmos {
     public static void main(String[] args) throws Exception {
         char[] s = { 'h', 'e', 'l', 'l', 'o' };
-        reverseString(s);
-        isPalindrome(121);
+        int[] colors = { 1, 2, 0 };
+        sortColors(colors);
     }
 
     // 0 4 (o, h)
@@ -37,13 +37,21 @@ public class AppAlgoritmos {
         for (int i = numberToStringSplit.length - 1; i >= 0; i--) {
             numberInverse += numberToStringSplit[i];
         }
-        System.out.println(numberInverse instanceof String);
-        System.out.println(numberToString instanceof String);
         if (numberInverse.equals(numberToString)) {
-            System.out.println("igual");
             return true;
         }
-        System.out.println("não igual");
         return false;
+    }
+
+    public static void sortColors(int[] nums) {
+        for (int i = 0; i < nums.length; i++) {
+            for (int j = 0; j < nums.length - 1; j++) {
+                if (nums[j] > nums[j + 1]) {
+                    int leftValueTemp = nums[j];
+                    nums[j] = nums[j + 1];
+                    nums[j + 1] = leftValueTemp;
+                }
+            }
+        }
     }
 }
