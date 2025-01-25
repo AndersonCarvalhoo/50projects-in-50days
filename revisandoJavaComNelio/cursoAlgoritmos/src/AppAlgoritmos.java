@@ -1,8 +1,13 @@
+import java.util.Arrays;
+
 public class AppAlgoritmos {
     public static void main(String[] args) throws Exception {
         char[] s = { 'h', 'e', 'l', 'l', 'o' };
         int[] colors = { 1, 2, 0 };
         sortColors(colors);
+        reverseWords("marcos");
+        System.out.println(reverseWords("marcos abrante"));
+        System.out.println("teste");
     }
 
     // 0 4 (o, h)
@@ -53,5 +58,38 @@ public class AppAlgoritmos {
                 }
             }
         }
+    }
+
+    public static String reverseWords(String s) {
+        String[] stringList = s.split(" ");
+        for (int i = 0; i < stringList.length; i++) {
+            String[] wordSplit = stringList[i].split("");
+            int leftIndex = 0;
+            int rightIndex = wordSplit.length - 1;
+
+            while (rightIndex > leftIndex) {
+
+                String temp = wordSplit[leftIndex];
+                wordSplit[leftIndex] = wordSplit[rightIndex];
+                wordSplit[rightIndex] = temp;
+
+                leftIndex++;
+                rightIndex--;
+            }
+
+            StringBuilder wordFormatted = new StringBuilder();
+            for (String lettersWord : wordSplit) {
+                wordFormatted.append(lettersWord);
+            }
+            stringList[i] = wordFormatted.toString();
+        }
+        StringBuilder reverseWordsString = new StringBuilder();
+        for (int i = 0; i < stringList.length; i++) {
+            reverseWordsString.append(stringList[i]);
+            if (i != stringList.length - 1) {
+                reverseWordsString.append(" ");
+            }
+        }
+        return reverseWordsString.toString();
     }
 }
