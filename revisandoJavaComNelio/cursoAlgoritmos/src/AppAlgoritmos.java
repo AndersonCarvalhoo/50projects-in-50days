@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class AppAlgoritmos {
@@ -91,5 +92,42 @@ public class AppAlgoritmos {
             }
         }
         return reverseWordsString.toString();
+    }
+
+    public static int[] twoSum(int[] nums, int target) {
+        int[] newList = sortNums(nums);
+        int leftPointer = 0;
+        int rightPointer = newList.length - 1;
+
+        while (leftPointer < rightPointer) {
+            int sum = newList[leftPointer] + newList[rightPointer];
+            if (sum == target) {
+                int[] list = { leftPointer, rightPointer };
+                return list;
+            }
+            if (sum > target) {
+                rightPointer--;
+            }
+            if (sum < target) {
+                leftPointer++;
+            }
+        }
+        return new int[] {};
+    }
+
+    public static int[] sortNums(int[] nums) {
+        int leftPointer = 0;
+        int rightPointer = nums.length - 1;
+
+        while (leftPointer < rightPointer) {
+
+            int temp = nums[leftPointer];
+            nums[leftPointer] = nums[rightPointer];
+            nums[rightPointer] = temp;
+
+            leftPointer++;
+            rightPointer++;
+        }
+        return nums;
     }
 }
