@@ -118,21 +118,15 @@ public class AppAlgoritmos {
         int lowerIndex = 0;
         int highIndex = nums.length - 1;
 
-        if (nums[0] == target) {
-            return 0;
-        } else if (nums[highIndex] == target) {
-            return highIndex;
-        }
-
-        while (lowerIndex < highIndex) {
+        while (lowerIndex <= highIndex) {
             int mid = lowerIndex + (highIndex - lowerIndex) / 2;
 
             if (nums[mid] == target) {
                 return mid;
-            } else if (target > nums[mid]) {
+            } else if (nums[mid] < target) {
                 lowerIndex = mid + 1;
             } else {
-                highIndex = mid;
+                highIndex = mid - 1;
             }
         }
         return -1;
