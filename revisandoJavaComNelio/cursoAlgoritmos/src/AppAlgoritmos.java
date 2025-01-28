@@ -6,8 +6,8 @@ public class AppAlgoritmos {
         char[] s = { 'h', 'e', 'l', 'l', 'o' };
         int[] colors = { 1, 2, 0 };
         sortColors(colors);
-        reverseWords("marcos");
-        System.out.println(reverseWords("marcos abrante"));
+        reverseString(s);
+        System.out.println(reverseWords("\n marcos abrante"));
         System.out.println("teste");
     }
 
@@ -95,12 +95,11 @@ public class AppAlgoritmos {
     }
 
     public static int[] twoSum(int[] nums, int target) {
-        int[] newList = sortNums(nums);
         int leftPointer = 0;
-        int rightPointer = newList.length - 1;
+        int rightPointer = nums.length - 1;
 
         while (leftPointer < rightPointer) {
-            int sum = newList[leftPointer] + newList[rightPointer];
+            int sum = nums[leftPointer] + nums[rightPointer];
             if (sum == target) {
                 int[] list = { leftPointer, rightPointer };
                 return list;
@@ -115,19 +114,27 @@ public class AppAlgoritmos {
         return new int[] {};
     }
 
-    public static int[] sortNums(int[] nums) {
-        int leftPointer = 0;
-        int rightPointer = nums.length - 1;
+    public int binarySearch(int[] nums, int target) {
+        int lowerIndex = 0;
+        int highIndex = nums.length - 1;
 
-        while (leftPointer < rightPointer) {
-
-            int temp = nums[leftPointer];
-            nums[leftPointer] = nums[rightPointer];
-            nums[rightPointer] = temp;
-
-            leftPointer++;
-            rightPointer++;
+        if (nums[0] == target) {
+            return 0;
+        } else if (nums[highIndex] == target) {
+            return highIndex;
         }
-        return nums;
+
+        while (lowerIndex < highIndex) {
+            int mid = lowerIndex + (highIndex - lowerIndex) / 2;
+
+            if (nums[mid] == target) {
+                return mid;
+            } else if (target > nums[mid]) {
+                lowerIndex = mid + 1;
+            } else {
+                highIndex = mid;
+            }
+        }
+        return -1;
     }
 }
