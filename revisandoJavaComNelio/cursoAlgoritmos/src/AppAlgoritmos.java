@@ -131,4 +131,27 @@ public class AppAlgoritmos {
         }
         return -1;
     }
+
+    public static int searchInsert(int[] nums, int target) {
+        int lowerIndex = 0;
+        int highIndex = nums.length - 1;
+
+        int mid = 0;
+        while (lowerIndex <= highIndex) {
+            mid = lowerIndex + (highIndex - lowerIndex) / 2;
+
+            if (target == nums[mid]) {
+                return mid;
+            } else if (target > nums[mid]) {
+                lowerIndex = mid + 1;
+            } else {
+                highIndex = mid - 1;
+            }
+        }
+        if (target > nums[mid]) {
+            return mid + 1;
+        }
+        return mid;
+    }
+
 }
