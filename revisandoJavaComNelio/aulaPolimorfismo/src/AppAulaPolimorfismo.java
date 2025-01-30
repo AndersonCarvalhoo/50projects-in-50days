@@ -5,7 +5,7 @@ import entities.Employee;
 import entities.OutsourcedEmployee;
 
 public class AppAulaPolimorfismo {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
         System.out.print("Enter the number of employees: ");

@@ -1,7 +1,7 @@
 package application;
 
 public class App {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         String cpf = "715.755.424-04";
         String[] cpfSplit = cpf.split("\\.");
         String[] cpfLast = cpfSplit[2].split("-");

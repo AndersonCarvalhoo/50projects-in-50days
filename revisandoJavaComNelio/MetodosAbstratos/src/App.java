@@ -7,7 +7,7 @@ import entities.Shape;
 import entities.enums.Color;
 
 public class App {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
         System.out.print("Enter the number of shapes: ");

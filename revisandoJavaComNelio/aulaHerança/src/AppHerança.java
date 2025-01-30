@@ -3,7 +3,7 @@ import entities.BusinessAccount;
 import entities.SavingsAccount;
 
 public class AppHerança {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
 
         // BusinessAccount bAcc = new BusinessAccount(1002, "Kezia", 0.0, 500.0);
 
