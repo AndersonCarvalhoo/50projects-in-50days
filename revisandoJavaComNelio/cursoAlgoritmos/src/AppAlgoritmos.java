@@ -1,6 +1,3 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-
 public class AppAlgoritmos {
     public static void main(String[] args) throws Exception {
         char[] s = { 'h', 'e', 'l', 'l', 'o' };
